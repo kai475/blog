@@ -1,3 +1,20 @@
+- [问题及答案汇总](#问题及答案汇总)
+  - [基础篇](#基础篇)
+    - [JavaScript](#javascript)
+      - [八大数据类型是什么，哪些是原始类型；另一种叫什么类型，与原始类型的区别是什么？](#八大数据类型是什么哪些是原始类型另一种叫什么类型与原始类型的区别是什么)
+      - [如何判断数据类型，各方法之间有何差异](#如何判断数据类型各方法之间有何差异)
+      - [instanceof的实现原理](#instanceof的实现原理)
+      - [简述JavaScript原型链。](#简述javascript原型链)
+      - [如何理解JavaScript单线程？单线程如何实现异步？简述JavaScript事件循环。](#如何理解javascript单线程单线程如何实现异步简述javascript事件循环)
+      - [哪些属于宏任务，哪些属于微任务？为什么有宏任务（Task）和微任务（Job）的区分，请举例说明。](#哪些属于宏任务哪些属于微任务为什么有宏任务task和微任务job的区分请举例说明)
+      - [使用setTimeout、setInterval和requsetAnimationFrame构造轮询之间的差异](#使用settimeoutsetinterval和requsetanimationframe构造轮询之间的差异)
+      - [如何实现事件委托（事件代理）？addEventListener中的useCapture如何使用？怎么停止事件冒泡/捕获？](#如何实现事件委托事件代理addeventlistener中的usecapture如何使用怎么停止事件冒泡捕获)
+      - [什么是深拷贝？如何实现？](#什么是深拷贝如何实现)
+      - [let、const、var的区别](#letconstvar的区别)
+      - [import和require的区别](#import和require的区别)
+      - [<script>放在头部和放在尾部的差异是什么？放在头部时，什么情况下会产生阻塞？](#script放在头部和放在尾部的差异是什么放在头部时什么情况下会产生阻塞)
+      - [获取元素宽高的方法有哪些？分别有什么区别？](#获取元素宽高的方法有哪些分别有什么区别)
+      - [如何获取位移坐标？](#如何获取位移坐标)
 
 # 问题及答案汇总
 ## 基础篇
