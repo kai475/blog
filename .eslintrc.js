@@ -18,5 +18,6 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'vue/comment-directive': 0,
   },
 };
