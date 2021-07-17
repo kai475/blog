@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 70vh;
+        padding: 0;
+        margin: 0;
+      }
+      .flex-container {
+        display: flex;
+        height: 100%;
+        flex-flow: column;
+      }
+      .flex-container__header {
+        height: 100px;
+        background: #000;
+      }
+      .flex-container__main {
+        flex: auto;
+        background: #f00;
+      }
+      .auto-height {
+        width: 50%;
+        height: 100%;
+        background: #ff0;
+      }
+      #heights {
+        white-space: pre;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <header class="flex-container__header"></header>
+      <main class="flex-container__main">
+        <div class="main__child auto-height"></div>
+      </main>
+    </div>
+
+    <p id="heights"></p>
+
+    <script>
+      const heights = document.querySelector("#heights");
+      const header = document.querySelector(".flex-container__header");
+      const main = document.querySelector(".flex-container__main");
+      const mainChild = document.querySelector(".main__child");
+
+      showHeights = () => {
+        heights.innerHTML = `heights:
+          header--${header.clientHeight}px;
+          main--${main.clientHeight}px;
+          main__child.auto-height--${mainChild.clientHeight}px;
+        `;
+      };
+
+      setAutoHeight = (target) => {
+        const targetEl = document.querySelector(target);
+        if (targetEl) {
+          const parentEl = targetEl.parentElement;
+          targetEl.style.cssText = `height: ${parentEl.clientHeight}px`;
+        }
+      };
+
+      window.onresize = () => {
+        showHeights();
+        setAutoHeight(".auto-height");
+      };
+      window.onload = showHeights;
+    </script>
+  </body>
+</html>
