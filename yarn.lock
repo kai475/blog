@@ -51,6 +51,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@graphql-typed-document-node/core@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npm.taobao.org/@graphql-typed-document-node/core/download/@graphql-typed-document-node/core-3.1.0.tgz#0eee6373e11418bfe0b5638f654df7a4ca6a3950"
+  integrity sha1-Du5jc+EUGL/gtWOPZU33pMpqOVA=
+
 "@nodelib/fs.scandir@2.1.4":
   version "2.1.4"
   resolved "https://registry.npm.taobao.org/@nodelib/fs.scandir/download/@nodelib/fs.scandir-2.1.4.tgz?cache=0&sync_timestamp=1609074618762&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40nodelib%2Ffs.scandir%2Fdownload%2F%40nodelib%2Ffs.scandir-2.1.4.tgz#d4b3549a5db5de2683e0c1071ab4f140904bbf69"
@@ -166,6 +171,22 @@
   dependencies:
     "@typescript-eslint/types" "4.26.0"
     eslint-visitor-keys "^2.0.0"
+
+"@urql/core@^2.1.5":
+  version "2.1.5"
+  resolved "https://registry.nlark.com/@urql/core/download/@urql/core-2.1.5.tgz#8fbc0846d6020cee89dadbee07ffb0a618ab29d8"
+  integrity sha1-j7wIRtYCDO6J2tvuB/+wphirKdg=
+  dependencies:
+    "@graphql-typed-document-node/core" "^3.1.0"
+    wonka "^4.0.14"
+
+"@urql/vue@^0.4.2":
+  version "0.4.2"
+  resolved "https://registry.nlark.com/@urql/vue/download/@urql/vue-0.4.2.tgz#799dbb50639ebfd0ed16713e2116bc744ca62020"
+  integrity sha1-eZ27UGOev9DtFnE+IRa8dEymICA=
+  dependencies:
+    "@urql/core" "^2.1.5"
+    wonka "^4.0.14"
 
 "@vitejs/plugin-vue@^1.2.2":
   version "1.2.2"
@@ -1014,6 +1035,11 @@ graceful-fs@^4.1.2, graceful-fs@^4.2.2:
   version "4.2.6"
   resolved "https://registry.nlark.com/graceful-fs/download/graceful-fs-4.2.6.tgz#ff040b2b0853b23c3d31027523706f1885d76bee"
   integrity sha1-/wQLKwhTsjw9MQJ1I3BvGIXXa+4=
+
+graphql@^15.5.1:
+  version "15.5.1"
+  resolved "https://registry.nlark.com/graphql/download/graphql-15.5.1.tgz?cache=0&sync_timestamp=1624199051986&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fgraphql%2Fdownload%2Fgraphql-15.5.1.tgz#f2f84415d8985e7b84731e7f3536f8bb9d383aad"
+  integrity sha1-8vhEFdiYXnuEcx5/NTb4u504Oq0=
 
 has-bigints@^1.0.1:
   version "1.0.1"
@@ -2079,6 +2105,11 @@ which@^2.0.1:
   integrity sha1-fGqN0KY2oDJ+ELWckobu6T8/UbE=
   dependencies:
     isexe "^2.0.0"
+
+wonka@^4.0.14:
+  version "4.0.15"
+  resolved "https://registry.nlark.com/wonka/download/wonka-4.0.15.tgz#9aa42046efa424565ab8f8f451fcca955bf80b89"
+  integrity sha1-mqQgRu+kJFZauPj0UfzKlVv4C4k=
 
 word-wrap@^1.2.3:
   version "1.2.3"

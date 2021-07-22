@@ -1,12 +1,15 @@
 {
-  "name": "blog-fe",
-  "version": "0.0.0",
+  "name": "@tomcloud/blog",
+  "version": "0.1.0",
+  "homepage": "https://kai475.github.io/blog",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview"
   },
   "dependencies": {
+    "@urql/vue": "^0.4.2",
+    "graphql": "^15.5.1",
     "vue": "^3.0.5"
   },
   "devDependencies": {
