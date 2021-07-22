@@ -32,7 +32,7 @@ jobs:
       - name: Yarn & Build
         run: |
           yarn --frozen-lockfile
-          yarn build
+          yarn build && cp -R docs dist
         env:
           GRAPHQL_TOKEN: ${{secrets.GRAPHQL_TOKEN}}
 
