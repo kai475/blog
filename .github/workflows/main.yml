@@ -6,7 +6,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -26,17 +26,16 @@ jobs:
       - name: Setup Node.js env
         uses: actions/setup-node@v2.3.0
         with:
-          node-version: >= 14.17.3
-          registry-url: https://registry.npm.taobao.org
-          cache: 'yarn'
-          
+          node-version: 14
+          cache: "yarn"
+
       - name: Yarn & Build
         run: |
           yarn --frozen-lockfile
           yarn build
         env:
           GRAPHQL_TOKEN: ${{secrets.GRAPHQL_TOKEN}}
-      
+
       - name: Deploy to Github Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
