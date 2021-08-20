@@ -19,7 +19,14 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue'],
+      },
+      alias: {
+        map: [['@', './src']],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue', '.d.ts'],
+      },
+      typescript: {
+        directory: './tsconfig.json',
       },
     },
   },
