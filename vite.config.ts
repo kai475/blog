@@ -4,12 +4,14 @@ import vue from '@vitejs/plugin-vue';
 import legacy from '@vitejs/plugin-legacy';
 import path from 'path';
 
+const srcPath = path.resolve(__dirname, 'src');
+
 // https://vitejs.dev/config/
 export default defineConfig({
   base: './',
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
+      '@': srcPath,
     },
   },
   plugins: [
@@ -21,8 +23,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       sass: {
-        additionalData: '@import "./src/assets/styles/common"',
-        javascriptEnabled: true,
+        additionalData: '@import "./src/assets/styles/index"',
       },
     },
   },
