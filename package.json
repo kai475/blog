@@ -10,7 +10,6 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@vitejs/plugin-legacy": "^1.4.4",
     "ky": "^0.28.5",
     "vue": "^3.2.4",
     "vue-router": "^4.0.11",
@@ -20,6 +19,7 @@
     "@types/node": "^16.0.0",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "@typescript-eslint/parser": "^4.26.0",
+    "@vitejs/plugin-legacy": "^1.4.4",
     "@vitejs/plugin-vue": "^1.2.2",
     "@vue/compiler-sfc": "^3.0.5",
     "autoprefixer": "^10.3.1",
