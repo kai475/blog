@@ -28,8 +28,6 @@ jobs:
         with:
           node-version: 14
           cache: "yarn"
-
-      - name: Yarn & Build
         run: |
           yarn --frozen-lockfile
           yarn build && cp -R docs dist
