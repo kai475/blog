@@ -1,70 +1,61 @@
 <template>
-  <h1>{{ msg }}</h1>
-
-  <p>
-    Recommended IDE setup:
-    <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
-    +
-    <a
-      href="https://marketplace.visualstudio.com/items?itemName=octref.vetur"
-      target="_blank"
-    >
-      Vetur
-    </a>
-    or
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-    (if using
-    <code>&lt;script setup&gt;</code>)
-  </p>
-
-  <p>See <code>README.md</code> for more information.</p>
-
-  <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">
-      Vite Docs
-    </a>
-    |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
-  </p>
-
-  <button @click="count++">count is: {{ count }}</button>
-  <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p>
+  <header class="header">
+    <nav class="header-nav">
+      <div v-for="item in menu" :key="item.sha" class="header-nav__item">
+        <a rel="noopener noreferrer" @click="handleNext(item.path)">{{
+          item.name?.toUpperCase()
+        }}</a>
+      </div>
+    </nav>
+  </header>
+  <aside class="aside"></aside>
+  <main class="main"></main>
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue'
+import { ref, defineComponent } from 'vue';
+import { getContent } from '@/apis';
+
 export default defineComponent({
   name: 'HelloWorld',
-  props: {
-    msg: {
-      type: String,
-      required: true
-    }
-  },
+  props: {},
   setup: () => {
-    const count = ref(0)
-    return { count }
-  }
-})
+    const menu = ref([]);
+
+    const getMenu = (path: string) =>
+      getContent(path).then(async (res) => {
+        if (res.status === 200) {
+          const data = await res.json();
+          if (data instanceof Object && data.type === 'file') {
+            window.location.href = `/blog/${data.path.split(/\.[^.]*$/)[0]}`;
+          } else {
+            menu.value = data;
+          }
+        }
+      });
+    getMenu('docs');
+    const handleNext = (path: string) => {
+      getMenu(path);
+    };
+    return {
+      menu,
+      handleNext,
+    };
+  },
+});
 </script>
 
-<style scoped>
-a {
-  color: #42b983;
-}
+<style lang="sass" scoped>
+.header-nav
+  @extend .flex-wrapper--col
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  justify-content: center
 
-label {
-  margin: 0 0.5em;
-  font-weight: bold;
-}
-
-code {
-  background-color: #eee;
-  padding: 2px 4px;
-  border-radius: 4px;
-  color: #304455;
-}
+  &__item
+    margin: 20px
+    text-align: center
 </style>
