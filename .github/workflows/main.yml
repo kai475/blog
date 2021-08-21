@@ -25,10 +25,10 @@ jobs:
       - uses: actions/setup-node@v2.3.0
         with:
           node-version: 14
-          cache: "yarn"
+          cache: 'yarn'
       - run: |
           yarn --frozen-lockfile
-          yarn build && cp -R docs dist
+          yarn build && cp -R docs dist && cp _config.yml dist
         env:
           GRAPHQL_TOKEN: ${{secrets.GRAPHQL_TOKEN}}
       - uses: JamesIves/github-pages-deploy-action@4.1.4
