@@ -1,0 +1,12 @@
+email: kai475@163.com
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
+markdown: kramdown
+theme: architect
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
