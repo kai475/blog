@@ -1,9 +1,9 @@
+email: kai475@163.com
 lsi: false
 safe: true
-source: [/]
 incremental: false
 highlighter: rouge
-theme: Architect
+theme: architect
 gist:
   noscript: false
 kramdown:
