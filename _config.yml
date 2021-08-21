@@ -4,7 +4,7 @@ safe: true
 incremental: false
 highlighter: rouge
 markdown: kramdown
-theme: architect
+theme: jekyll-theme-architect
 gist:
   noscript: false
 kramdown:
