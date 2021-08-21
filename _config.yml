@@ -3,10 +3,14 @@ lsi: false
 safe: true
 incremental: false
 highlighter: rouge
-markdown: kramdown
 theme: jekyll-theme-architect
 gist:
   noscript: false
+markdown: kramdown
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
+defaults:
+  - values:
+      toc: true
+      mathjax: true
