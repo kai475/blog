@@ -3,6 +3,7 @@ lsi: false
 safe: true
 incremental: false
 highlighter: rouge
+markdown: kramdown
 theme: architect
 gist:
   noscript: false
